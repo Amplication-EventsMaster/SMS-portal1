@@ -24,6 +24,7 @@ export const MessageShow = (props: ShowProps): React.ReactElement => {
         >
           <TextField source={PROVIDER_TITLE_FIELD} />
         </ReferenceField>
+        <TextField label="token count" source="tokenCount" />
         <DateField source="updatedAt" label="Updated At" />
       </SimpleShowLayout>
     </Show>

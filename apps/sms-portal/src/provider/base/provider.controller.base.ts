@@ -222,6 +222,7 @@ export class ProviderControllerBase {
           },
         },
 
+        tokenCount: true,
         updatedAt: true,
       },
     });

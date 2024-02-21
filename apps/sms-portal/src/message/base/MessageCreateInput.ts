@@ -11,7 +11,13 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional, IsDate, ValidateNested } from "class-validator";
+import {
+  IsString,
+  IsOptional,
+  IsDate,
+  ValidateNested,
+  IsInt,
+} from "class-validator";
 import { Type } from "class-transformer";
 import { ProviderWhereUniqueInput } from "../../provider/base/ProviderWhereUniqueInput";
 
@@ -50,6 +56,17 @@ class MessageCreateInput {
     nullable: true,
   })
   provider?: ProviderWhereUniqueInput | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  tokenCount?: number | null;
 }
 
 export { MessageCreateInput as MessageCreateInput };

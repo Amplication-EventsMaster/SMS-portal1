@@ -17,6 +17,7 @@ import { IsOptional, ValidateNested } from "class-validator";
 import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { ProviderWhereUniqueInput } from "../../provider/base/ProviderWhereUniqueInput";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
 
 @InputType()
 class MessageWhereInput {
@@ -64,6 +65,17 @@ class MessageWhereInput {
     nullable: true,
   })
   provider?: ProviderWhereUniqueInput;
+
+  @ApiProperty({
+    required: false,
+    type: IntNullableFilter,
+  })
+  @Type(() => IntNullableFilter)
+  @IsOptional()
+  @Field(() => IntNullableFilter, {
+    nullable: true,
+  })
+  tokenCount?: IntNullableFilter;
 }
 
 export { MessageWhereInput as MessageWhereInput };

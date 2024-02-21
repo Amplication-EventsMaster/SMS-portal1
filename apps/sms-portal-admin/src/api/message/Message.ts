@@ -6,5 +6,6 @@ export type Message = {
   dateSent: Date | null;
   id: string;
   provider?: Provider | null;
+  tokenCount: number | null;
   updatedAt: Date;
 };

@@ -70,6 +70,7 @@ export class MessageControllerBase {
           },
         },
 
+        tokenCount: true,
         updatedAt: true,
       },
     });
@@ -103,6 +104,7 @@ export class MessageControllerBase {
           },
         },
 
+        tokenCount: true,
         updatedAt: true,
       },
     });
@@ -137,6 +139,7 @@ export class MessageControllerBase {
           },
         },
 
+        tokenCount: true,
         updatedAt: true,
       },
     });
@@ -188,6 +191,7 @@ export class MessageControllerBase {
             },
           },
 
+          tokenCount: true,
           updatedAt: true,
         },
       });
@@ -230,6 +234,7 @@ export class MessageControllerBase {
             },
           },
 
+          tokenCount: true,
           updatedAt: true,
         },
       });

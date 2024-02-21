@@ -6,5 +6,6 @@ export type MessageOrderByInput = {
   dateSent?: SortOrder;
   id?: SortOrder;
   providerId?: SortOrder;
+  tokenCount?: SortOrder;
   updatedAt?: SortOrder;
 };

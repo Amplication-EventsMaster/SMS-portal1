@@ -25,6 +25,7 @@ model Message {
   id         String    @id @default(cuid())
   provider   Provider? @relation(fields: [providerId], references: [id])
   providerId String?
+  tokenCount Int?
   updatedAt  DateTime  @updatedAt
 }
 

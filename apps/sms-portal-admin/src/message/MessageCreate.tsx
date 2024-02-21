@@ -8,6 +8,7 @@ import {
   DateTimeInput,
   ReferenceInput,
   SelectInput,
+  NumberInput,
 } from "react-admin";
 
 import { ProviderTitle } from "../provider/ProviderTitle";
@@ -25,6 +26,7 @@ export const MessageCreate = (props: CreateProps): React.ReactElement => {
         >
           <SelectInput optionText={ProviderTitle} />
         </ReferenceInput>
+        <NumberInput step={1} label="token count" source="tokenCount" />
       </SimpleForm>
     </Create>
   );

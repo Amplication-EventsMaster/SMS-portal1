@@ -31,6 +31,7 @@ export const MessageList = (props: ListProps): React.ReactElement => {
         >
           <TextField source={PROVIDER_TITLE_FIELD} />
         </ReferenceField>
+        <TextField label="token count" source="tokenCount" />
         <DateField source="updatedAt" label="Updated At" />
       </Datagrid>
     </List>
